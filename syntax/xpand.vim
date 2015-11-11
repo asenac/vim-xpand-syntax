@@ -17,10 +17,12 @@ syn keyword XptIf contained
             \ IF ENDIF ELSE
 syn region XptString contained
             \ start=+\z(['"]\)+ end="\z1" skip="\\\\\|\\\z1"
+syn match XptBrackets contained "\(«\|»\)"
 syn region XptContext keepend start="«" end="»"
-            \ contains=XptIf,XptImport,XptStatements,XptKeywords,XptString
+            \ contains=XptBrackets,XptIf,XptImport,XptStatements,XptKeywords,XptString
 syn region XptComment keepend start="«REM»" end="«ENDREM»"
 
+hi def link XptBrackets Define
 hi def link XptIf Conditional
 hi def link XptStatements Statement
 hi def link XptImport Include
