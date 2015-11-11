@@ -8,7 +8,8 @@ syn keyword XptKeywords contained
             \ EXPAND
             \ PROTECT ENDPROTECT
 syn keyword XptStatements contained
-            \ FOR FOREACH SEPARATOR
+            \ FOREACH ENDFOREACH AS
+            \ FOR SEPARATOR
             \ ID CSTART CEND DISABLE
 syn keyword XptImport contained
             \ IMPORT EXTENSION
